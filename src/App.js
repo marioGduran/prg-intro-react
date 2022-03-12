@@ -1,10 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Inicio from './inicio'
+import Encabezado from './Encabezado';
+import{Routes, Route} from 'react-router-dom'
+import Contacto from './Contacto';
+import Productos from './Productos';
+
 
 function App() {
   return (
-  <h1>Bienvenido a React</h1>  
+  <>
+    <Encabezado />
+    <Routes>
+     <Route path='/' element={<Inicio/>}  />
+     <Route path='./Contacto' element={<Contacto/>}   />
+     <Route path='/Productos' element={<Productos/>}   />
+     </Routes>
+
+  </>
+
   );
-}
+  }
 
 export default App;
